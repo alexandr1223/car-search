@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             slidesToScroll: 1,
             arrows: true,
             fade: true,
-            asNavFor: '.car__nav'
+            asNavFor: '.car__nav',
+            prevArrow: "<div class='prev'><img src='../img/svg/select-arrow.svg' alt='1'></div>",
+			nextArrow: "<div class='next'><img src='../img/svg/select-arrow.svg' alt='2'></div>",
         });
         $('.car__nav').slick({
             slidesToShow: 5,
@@ -45,8 +47,49 @@ document.addEventListener("DOMContentLoaded", function(event) {
             asNavFor: '.car__for',
             arrows: true,
             centerMode: true,
-            focusOnSelect: true
+            focusOnSelect: true,
+            prevArrow: "<div class='prev'><img src='../img/svg/select-arrow.svg' alt='1'></div>",
+			nextArrow: "<div class='next'><img src='../img/svg/select-arrow.svg' alt='2'></div>",
         });
+        document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
+        document.querySelector('.car__length').textContent = $(".car__for").slick("getSlick").slideCount
+        document.querySelector('.car__for .next').addEventListener('click', () => {
+            document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
+        })
+        document.querySelector('.car__for .prev').addEventListener('click', () => {
+            document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
+        })
+        document.querySelector('.car__nav .next').addEventListener('click', () => {
+            document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
+        })
+
+        $('.car__links').slick({
+			centerMode: true,
+            arrows: true,
+			slidesToShow: 3,
+			variableWidth: true,
+			prevArrow: "<div class='prev'><img src='../img/svg/arrow.svg' alt='1'></div>",
+			nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
+			responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+				centerMode: true,
+				centerPadding: '40px',
+				slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+				arrows: false,
+				centerMode: true,
+				centerPadding: '40px',
+				slidesToShow: 1
+				}
+			}
+			]
+		});
     })
 
 
