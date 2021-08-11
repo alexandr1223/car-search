@@ -1,0 +1,394 @@
+.search
+    background: url('../img/bg/search-bg.png') center center/cover no-repeat
+    padding-top: 116px
+    &__nav
+        margin: 0 auto
+        margin-bottom: 40px
+        display: flex
+        align-items: center
+        width: max-content
+    &__text
+        font-size: 24px
+        line-height: 28px
+        color: #fff
+        font-family: "RobotoLight"
+        margin-right: 33px
+    &__input
+        font-size: 18px
+        padding: 14px 30px
+        background: #fff
+        border: none
+        border-radius: 50px
+        width: 552px
+        margin-right: 30px
+    &__navBtn
+        font-size: 18px
+        line-height: 21px
+        height: 50px 
+        width: 170px
+        text-align: center
+        line-height: 50px
+        border: 1px solid #FF5252
+        background: transparent
+        color: #fff
+        cursor: pointer
+    &__content
+        width: 1170px
+        background: rgba(255, 255, 255, 0.06)
+        border: 1px solid #37444E
+        backdrop-filter: blur(30px)
+        margin: 0 auto
+        display: flex
+        padding: 48px 55px 41px 55px
+        margin-bottom: 50px
+    &__selects
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 43px 30px
+        width: 100%
+        margin-right: 35px
+    &__body
+        width: 200px
+        display: flex
+        flex-direction: column
+    &__checklist
+        display: flex
+        flex-direction: column
+        border: 1px solid #fff
+        border-radius: 4px
+        height: 173px
+        padding: 32px 5px 20px 25px
+        position: relative
+        width: 200px
+        z-index: 1
+    &__box
+        display: flex
+        flex-direction: column
+        overflow-y: scroll
+        padding-right: 25px
+        &::-webkit-scrollbar
+            width: 8px
+            background: #1A242E
+            border-radius: 8px
+            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.8)
+        &::-webkit-scrollbar-thumb
+            background: #FF5252
+            border-radius: 6px
+    &__name
+        position: absolute
+        top: -10px
+        color: #fff
+        background: transparent
+        z-index: 2
+    &__checkbox
+        position: absolute
+        z-index: -1
+        opacity: 0
+        &+label
+            display: inline-flex
+            align-items: center
+            user-select: none
+            height: 20px
+            color: #fff
+            font-size: 14px
+            &::before
+                content: ''
+                display: inline-block
+                width: 20px
+                height: 20px
+                flex-shrink: 0
+                flex-grow: 0
+                border: 1px solid #fff
+                margin-right: 11px
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: 50% 50%
+            &:not(:last-child)
+                margin-bottom: 12px
+        &:checked
+            &+label
+                &::before
+                    border-color: #073773
+                    background-color: #073773
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+    &__item
+        position: relative
+        width: 255px
+        span
+            position: absolute
+            background: #182127
+            color: #fff
+            z-index: 30
+            padding: 0 10px
+            left: 20px
+            top: -10px
+    &__bottom
+        width: 100%
+        background: rgba(26, 36, 46, 0.8)
+    &__paginationBlock
+        width: 1170px
+        height: 80px
+        margin: 0 auto
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__pagination
+        margin: 0
+        width: 33%
+        .pagination__prev
+            path
+                fill: #fff
+        .pagination__next
+            path
+                fill: #fff
+        .pagination__item
+            color: #fff
+            border: 1px solid #fff
+            &--active
+                border: 1px solid #FF5252
+    &__paginationSelect
+        width: 33%
+        height: 50px
+        display: flex
+        .styledSelect
+            color: #fff
+        .select
+            margin-left: auto
+    &__car-count
+        width: 33%
+        span    
+            margin-left: 10px
+            font-size: 20px
+            color: rgba(255, 82, 82, 1)
+    &__btn
+        font-size: 18px
+        color: #fff
+        text-align: center
+        display: flex
+        width: 100%
+        height: 50px
+        line-height: 50px
+        background: #FF5252
+        align-items: center
+        justify-content: center
+        margin-top: 14px
+        cursor: pointer
+        span
+            font-family: 'RobotoBold'
+            margin: 0 4px
+
+.car-list
+    padding-bottom: 60px
+    &::after
+        content: ''
+        height: 1px
+        background: url('../img/devide.png') center center/cover no-repeat
+        width: 1410px
+        display: block
+        margin: 0 auto
+        margin-top: 60px
+    &__block
+        margin-top: 62px
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-gap: 26px 12px
+        margin-bottom: 70px
+    &__item
+        display: flex
+        flex-direction: column
+        transition: .4s
+        border-radius: 15px
+        &:hover
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25)
+    &__image
+        width: 225px
+        height: 164px
+        object-fit: cover
+        border-radius: 15px 15px 0px 0px
+    &__nav
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+    &__name
+        max-width: 100px
+        font-size: 14px
+        line-height: 16px
+        font-family: "RobotoBold"
+        color: rgba(68, 77, 86, 1)
+    &__price
+        font-size: 18px
+        font-family: "RobotoBold"
+        color: rgba(255, 82, 82, 1)
+    &__content
+        padding: 20px 10px 25px 10px
+        border-radius: 0 0 15px 15px
+        background: #F5F5F5
+    &__info
+        display: flex
+        flex-direction: column
+    &__infoItem
+        display: flex
+        justify-content: space-between
+        &:not(:last-child)
+            margin-bottom: 5px
+    &__type
+        background: #444D56
+        border-radius: 20px
+        width: 110px
+        height: 23px
+        display: flex
+        align-items: center
+        padding-left: 10px
+        span
+            color: #fff
+            font-size: 14px
+            font-family: "RobotoLight"
+            line-height: 16px
+        svg
+            width: 18px
+            height: auto
+            margin-right: 6px
+    &__text
+        color: rgba(68, 77, 86, 1)
+        span
+            font-size: 14px
+            color: rgba(68, 77, 86, 1)
+
+.blog
+    padding-bottom: 100px
+    .container
+        width: 1170px
+    &__title
+        font-size: 50px
+    &__nav
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 25px
+    &__all
+        font-size: 16px
+        color: rgba(68, 77, 86, 1)
+        svg
+            margin-left: 11px
+    &__block
+        display: grid
+        grid-template-columns: 690px 450px
+        grid-gap: 30px
+        margin: 0 auto
+    &__left
+        height: 520px
+        position: relative
+    &__item
+        position: relative
+        height: 100%
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            display: block
+            height: 135px
+            z-index: 1
+            width: 100%    
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+    &__right
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 20px
+        height: 520px
+    &__image
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__itemTitle
+        position: absolute
+        bottom: 30px
+        left: 20px
+        font-size: 20px
+        line-height: 24px
+        color: #fff
+        font-family: "RobotoBold"
+        max-width: 480px
+        width: 90%
+        z-index: 2
+        &--small
+            font-size: 18px
+            line-height: 130%
+    &__date
+        background: rgba(255, 255, 255, 0.8)
+        padding: 7px 15px
+        font-size: 16px
+        position: absolute
+        top: 20px 
+        right: 20px
+
+.car
+    padding-top: 76px
+    .container
+        max-width: 1170px
+    &__title
+        margin-top: 50px
+    &__box
+        display: flex
+    &__slider
+        width: 570px
+        margin-right: 30px
+    &__info
+        width: 100%
+    &__infoNav
+        display: flex
+        justify-content: space-between
+        margin-bottom: 19px
+    &__infoPrice
+        font-size: 40px
+        line-height: 46px
+        color: rgba(255, 82, 82, 1)
+        font-family: "RobotoBold"
+    &__infoVin
+        background: #52B6FF
+        border-radius: 8px
+        text-align: center
+        padding: 13px 24px 9px 24px
+        font-size: 18px
+        color: #fff
+        span
+            font-size: 20px
+            margin-left: 10px
+
+.details
+    display: grid
+    grid-template-columns: 275px 275px
+    grid-gap: 0 19px
+    &__item
+        display: flex
+        flex-direction: column
+        background: #F5F5F5
+        padding: 34px 16px 23px 16px
+        border-radius: 12px
+        position: relative
+        &::before
+            content: ''
+            background: url('../img/svg/param-before.svg') center center/cover no-repeat
+            position: absolute
+            left: 0
+            width: 100%
+            height: 10px
+            top: 0
+            display: block
+    &__line
+        height: 25px
+        display: flex
+        &:not(:last-child)
+            margin-bottom: 14px
+    &__name
+        display: flex
+        width: 50%
+        font-size: 12px
+        font-family: "RobotoLight"
+        align-items: center
+        svg
+            margin-right: 11px
+    &__value
+        width: 50%
+        font-size: 13px
+        font-family: "RobotoBold"

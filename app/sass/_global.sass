@@ -1,0 +1,207 @@
+html,
+body 
+	height: 100%
+	font-family: "RobotoRegular"
+	color: rgba(68, 77, 86, 1)
+
+.wrapper 
+	display: flex
+	flex-direction: column
+	min-height: 100%
+
+.main 
+	word-wrap: break-word
+	flex: 1 0 auto
+
+.footer 
+	flex: 0 0 auto
+
+.container
+  max-width: 1410px
+  margin: 0 auto
+
+.title
+	word-wrap: break-word
+
+.subtitle
+	word-wrap: break-word
+
+input
+	cursor: pointer
+	&::placeholder,
+	&::-webkit-input-placeholder,
+	&::-moz-placeholder,
+	&::-ms-input-placeholder,
+		color: rgba(208, 212, 216, 1)
+
+.header
+	height: 76px
+	position: fixed
+	top: 0
+	width: 100%
+	left: 0
+	border-bottom: 1px solid #37444E
+	display: flex
+	align-items: center
+	&--black
+		background: #131C25 
+	&__nav
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 1410px
+	&__auth
+		display: flex
+		align-items: center
+		a,span
+			color: #fff
+			font-size: 16px
+			line-height: 18px
+		span
+			margin: 0 6px
+		svg
+			margin-right: 8px
+	&__links
+		display: flex
+		li
+			position: relative
+			transition: .4s
+			a
+				font-size: 16px
+				color: #fff
+			&:not(:last-child)
+				margin-right: 100px
+			&:hover
+				&:after
+					content: ''
+					transition: .4s
+					height: 2px
+					left: -20px
+					width: calc( 100% + 40px )
+					position: absolute
+					display: block
+					bottom: -29px
+					background: #FF5252
+		.active
+			&::after
+				content: ''
+				height: 2px
+				left: -20px
+				width: calc( 100% + 40px )
+				position: absolute
+				display: block
+				bottom: -29px
+				background: #FF5252
+
+.pagination
+    display: flex
+    align-items: center
+    margin: 0 auto
+    margin-top: 54px
+    width: max-content
+    &__item
+        font-size: 16px
+        color: rgba(68, 77, 86, 1)
+        width: 30px
+        height: 30px
+        line-height: 30px
+        text-align: center
+        border: 1px solid #444D56
+        font-family: "RobotoLight"
+        &:not(:nth-child(7))
+            margin-right: 20px
+        &--active
+            background: #FF5252
+            color: #fff
+    &__prev
+        margin-right: 30px
+        cursor: pointer
+        transform: rotate(180deg)
+    &__next
+        margin-left: 30px
+        cursor: pointer
+    &__dot
+        letter-spacing: .1em
+	
+.select
+	cursor: pointer
+	display: inline-block
+	padding-right: 16px
+	position: relative
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	-o-user-select: none
+	user-select: none
+	width: 255px
+
+.styledSelect
+	background: transparent
+	border-radius: 3px
+	bottom: 0
+	border: 1px solid #fff
+	color: rgba(74, 90, 103, 1)
+	font-size: 16px
+	z-index: 10
+	left: 0
+	padding: 0 8px
+	position: absolute
+	right: 0
+	top: 0
+	height: 50px
+	padding: 15px 20px 14px 25px
+	width: 255px
+	span
+		z-index: 20
+	&::after
+		content: ''
+		background: url('../img/svg/select-arrow.svg')
+		width: 12px
+		height: 7px
+		display: block
+		position: absolute
+		right: 30px
+		top: 20px
+		
+
+	&:active
+		.active
+			background-color: #fff
+			box-shadow: inset 0 1px 4px hsla(0, 0%, 0%, 0.25), inset 0 0 0 1px hsla(0, 0%, 0%, 0.25), inset 0 0 0 2px hsla(0, 0%, 100%, 0.25)
+
+.options
+	width: 255px
+	background: #fff
+	border-radius: 0 0 3px 3px
+	box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.25), inset 0 0 0 1px hsla(0, 0%, 0%, 0.3), inset 0 0 0 2px hsla(0, 0%, 100%, 0.25)
+	color: rgba(74, 90, 103, 1)
+	display: none
+	font-size: 16px
+	left: 2px
+	margin: 0
+	padding: 0
+	position: absolute
+	right: 2px
+	top: 50px
+	z-index: 999
+	li	
+
+.active + .options
+  	z-index: 9999
+
+.options li
+	
+	padding: 8px 20px
+
+	&:last-child
+		border-radius: 0 0 3px 3px
+
+	&:hover
+		background: #3A434B
+		box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.25), inset 0 0 0 2px hsla(0, 0%, 100%, 0.1)
+		color: #fff
+	
+.select
+	
+	select
+		opacity: 0
