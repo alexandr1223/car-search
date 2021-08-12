@@ -32,7 +32,7 @@ input
 	&::-webkit-input-placeholder,
 	&::-moz-placeholder,
 	&::-ms-input-placeholder,
-		color: rgba(208, 212, 216, 1)
+		color: #fff
 
 .header
 	height: 76px
@@ -44,8 +44,15 @@ input
 	display: flex
 	align-items: center
 	z-index: 20
+	transition: .4s
+	&-mobile
+		display: none
+	&__menu
+		display: none
+	&__scroll
+		background: #131C25 !important
 	&--black
-		background: #131C25 
+		background: #131C25
 	&__nav
 		display: flex
 		align-items: center
@@ -121,17 +128,6 @@ input
 				color: #fff
 			&:not(:last-child)
 				margin-right: 100px
-			&:hover
-				&:after
-					content: ''
-					transition: .4s
-					height: 2px
-					left: -20px
-					width: calc( 100% + 40px )
-					position: absolute
-					display: block
-					bottom: -29px
-					background: #FF5252
 	&__auth
 		display: flex
 		align-items: center
@@ -145,35 +141,36 @@ input
 			margin-right: 8px
 
 .pagination
-    display: flex
-    align-items: center
-    margin: 0 auto
-    margin-top: 54px
-    width: max-content
-    &__item
-        font-size: 16px
-        color: rgba(68, 77, 86, 1)
-        width: 30px
-        height: 30px
-        line-height: 30px
-        text-align: center
-        border: 1px solid #444D56
-        font-family: "RobotoLight"
-        &:not(:nth-child(7))
-            margin-right: 20px
-        &--active
-            background: #FF5252
-            color: #fff
-    &__prev
-        margin-right: 30px
-        cursor: pointer
-        transform: rotate(180deg)
-    &__next
-        margin-left: 30px
-        cursor: pointer
-    &__dot
-        letter-spacing: .1em
-	
+	display: flex
+	align-items: center
+	margin: 0 auto
+	margin-top: 54px
+	width: max-content
+	&__item
+		font-size: 16px
+		color: rgba(68, 77, 86, 1)
+		width: 30px
+		height: 30px
+		line-height: 30px
+		text-align: center
+		border: 1px solid #444D56
+		font-family: "RobotoLight"
+		&:not(:nth-child(7))
+			margin-right: 20px
+		&--active
+			background: #FF5252
+			color: #fff	
+			border: 1px solid #FF5252 !important
+	&__prev
+		margin-right: 30px
+		cursor: pointer
+		transform: rotate(180deg)
+	&__next
+		margin-left: 30px
+		cursor: pointer
+	&__dot
+		letter-spacing: .1em
+
 .select
 	cursor: pointer
 	display: inline-block
@@ -203,6 +200,7 @@ input
 	height: 50px
 	padding: 17px 20px 14px 25px
 	width: 255px
+	line-height: 24px
 	span
 		z-index: 20
 	&::after
@@ -213,7 +211,7 @@ input
 		display: block
 		position: absolute
 		right: 30px
-		top: 20px
+		top: 24px
 		
 
 	&:active

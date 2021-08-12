@@ -1,0 +1,589 @@
+@media (max-width: 1460px)
+    .container
+        max-width: 1100px
+    .header
+        &__nav
+            width: 1100px
+    .search
+        &__content
+            width: 1100px
+        &__item
+            width: 230px
+            &--solo
+                width: 234px
+        .styledSelect
+            width: 230px
+        .select
+            width: 230px
+        &__smallinput
+            width: 230px
+        &__paginationBlock
+            width: 1100px
+
+    .car-list
+        &::after
+            width: 1100px
+        &__block
+            grid-template-columns: 1fr 1fr 1fr 1fr
+
+    .blog
+        &__block
+            grid-template-columns: 660px 410px
+        &__left
+            
+    .footer
+        .container
+            max-width: 1100px
+    .info
+        .container
+            max-width: 1170px
+    
+    .graph
+        width: 850px
+
+@media (max-width: 1200px)
+    .info
+        &__last
+            min-width: 230px
+        &__content
+            margin-right: 40px
+            width: 850px
+
+@media (max-width: 1150px)
+    .container
+        max-width: 700px
+    .header
+        &__nav
+            width: 700px
+            li
+                &:not(:last-child)
+                    margin-right: 50px
+
+    .search
+        &__input    
+            width: 350px
+            font-size: 16px
+            margin-right: 20px
+        &__text
+            font-size: 16px
+            margin-right: 20px
+        &__navBtn
+            width: 160px
+            height: 48px
+            line-height: 48px
+            font-size: 16px
+        &__content
+            width: 100%
+            display: flex
+            flex-direction: column
+            padding: 30px
+        &__paginationBlock
+            width: 700px
+            display: grid
+            grid-gap: 20px
+            height: 160px
+            grid-template-columns: 1fr 1fr
+        &__pagination
+            width: max-content
+            margin: 0 auto
+            order: 1
+            grid-column-start: 1
+            grid-column-end: 3
+        &__car-count
+            order: 2
+        &__paginationSelect
+            width: auto
+            order: 3
+            .select
+                width: 250px !important
+            .styledSelect
+                width: 250px !important
+        &__selects
+            grid-gap: 35px 20px 
+        &__item
+            width: 194px
+            &--solo
+                width: 196px
+        .styledSelect
+            width: 194px
+        .select
+            width: 194px
+        &__smallinput
+            width: 194px
+        &__checklist
+            flex-direction: row
+            height: 110px
+            width: 420px
+            margin-right: 20px
+            padding-bottom: 20px
+        &__box
+            height: 46px
+            width: 350px
+            flex-direction: row
+            overflow: auto
+            overflow-x: scroll
+            &::-webkit-scrollbar
+                height: 6px
+                background: #1A242E
+                border-radius: 8px
+                box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.8)
+            &::-webkit-scrollbar-thumb
+                background: #FF5252
+                border-radius: 6px
+        &__body
+            width: 100%
+            flex-direction: row
+            margin-top: 20px
+            justify-content: space-between
+        &__btn
+            width: 200px
+        &__checkbox
+            &+label
+                &:not(:last-child)
+                    margin-right: 20px
+
+    .car-list
+        &::after
+            display: none
+        &__block
+            grid-template-columns: 1fr 1fr 1fr
+
+    .blog
+        &__block
+            grid-gap: 20px
+            grid-template-columns: 380px 290px
+        &__left
+            height: 480px
+        &__right
+            height: 480px
+        &__itemTitle
+            font-size: 16px
+            line-height: 24px
+
+    .footer
+        .container
+            max-width: 700px
+        &__nav
+            li
+                &:not(:last-child)
+                    margin-right: 40px
+
+    .car
+        .container
+            max-width: 700px
+        &__box
+            display: flex
+            flex-direction: column
+        &__slider
+            width: 100%
+        &__for
+            width: 100%
+            height: 480px
+            margin-bottom: 20px
+        &__info
+            margin-top: 30px
+    .details
+        width: max-content
+        margin: 0 auto
+    
+    .info
+        .container
+            width: 700px
+        &__block
+            display: flex
+            flex-direction: column
+        &__content
+            width: 100%
+            margin-right: 0
+        &__last
+            display: flex
+            flex-direction: column
+            width: 100%
+            margin-top: 30px
+        &__lastBlock
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            grid-gap: 0 20px
+
+    
+    .graph
+        width: 100%
+        &__body
+            width: 580px
+        &__row
+            width: 560px
+            .row__item
+                max-width: 47px
+                font-size: 8px
+        .circle
+            &-1
+                bottom: 20px
+                left: 25px
+            &-2
+                bottom: 50px
+                left: 70px
+            &-3
+                bottom: 90px
+                left: 120px
+            &-4
+                bottom: 130px
+                left: 165px
+            &-5
+                bottom: 170px
+                left: 210px
+            &-6
+                bottom: 230px
+                left: 255px
+            &-7
+                bottom: 260px
+                left: 305px
+            &-8
+                bottom: 170px
+                left: 355px
+            &-9
+                bottom: 140px
+                left: 400px
+
+
+@media (max-width: 767px)
+    .container
+        max-width: 100%
+        padding: 0 15px
+    .header
+        height: 60px
+        &__nav
+            max-width: 100%
+            display: flex
+            justify-content: space-between
+            li
+                &:not(:last-child)
+                    margin-right: 50px
+        &__auth
+            display: none
+        &__links
+            display: none
+        &__menu
+            display: block
+            svg
+                width: 27px
+                height: 27px
+                fill: #fff
+    .header-mobile
+        display: block
+        position: absolute
+        top: 0
+        width: 100%
+        background: rgba(0, 0, 0, .4)
+        width: 100%
+        height: 100vh
+        left: -100%
+        transition: .4s
+        &__cover
+            background: #fff
+            position: absolute
+            left: 0
+            top: 0
+            z-index: 30
+            width: 80%
+            display: flex
+            flex-direction: column
+            height: 100vh
+            padding: 20px
+        &__logo
+            margin-bottom: 30px
+            svg
+                path
+                    fill: #000
+        &__auth
+            display: flex
+            align-items: center
+            margin-top: 30px
+            a,span
+                color: #000
+                font-size: 16px
+                line-height: 18px
+            span
+                margin: 0 6px
+            svg
+                path
+                    fill: #000
+                margin-right: 8px
+        &__links
+            display: flex
+            flex-direction: column
+            li
+                position: relative
+                transition: .4s
+                a
+                    font-size: 16px
+                    color: #000
+                &:not(:last-child)
+                    margin-bottom: 20px
+        &__close
+            position: absolute
+            right: 20px
+            width: 15px
+            height: 15px
+            svg
+                width: 15px
+                height: 15px
+                path
+                    fill: #000
+
+    .search
+        padding-top: 90px
+        &__input    
+            width: 100%
+            max-width: 350px
+            font-size: 16px
+            margin-right: 20px
+            margin-bottom: 15px
+        &__nav
+            display: flex
+            flex-direction: column
+            margin-bottom: 20px
+            form
+                display: flex
+                flex-direction: column
+        &__text
+            font-size: 16px
+            margin-right: 20px
+            text-align: center
+            margin: 0
+            margin-bottom: 10px
+        &__navBtn
+            width: 160px
+            height: 48px
+            line-height: 48px
+            font-size: 16px
+            margin: 0 auto
+        &__content
+            width: 100%
+            display: flex
+            flex-direction: column
+            padding: 30px
+        &__paginationBlock
+            width: 100%
+            display: grid
+            grid-gap: 10px
+            height: 160px
+            grid-template-columns: 1fr 1fr
+            padding: 20px 15px
+        &__pagination
+            width: max-content
+            margin: 0 auto
+            order: 3
+            grid-column-start: 1
+            grid-column-end: 3
+        &__car-count
+            width: 100%
+            order: 1
+        &__paginationSelect
+            width: auto
+            order: 2
+            .options
+                width: 230px !important
+            .select
+                width: 230px !important
+            .styledSelect
+                width: 230px !important
+        &__selects
+            grid-gap: 20px 20px 
+            grid-template-columns: 1fr
+            margin-right: 0
+        &__item
+            width: 100%
+            &--solo
+                width: 100%
+        .styledSelect
+            width: 100%
+        .options
+            width: 100%
+        .select
+            width: 100%
+        &__smallinput
+            width: 100%
+        &__checklist
+            flex-direction: row
+            height: 180px
+            width: 100%
+            margin-right: 20px
+            padding-top: 20px
+            overflow: hidden
+        &__box
+            height: 120px
+            width: 100%
+            flex-direction: column  
+            overflow: auto
+            overflow-y: scroll
+            &::-webkit-scrollbar
+                height: 6px
+                background: #1A242E
+                border-radius: 8px
+                box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.8)
+            &::-webkit-scrollbar-thumb
+                background: #FF5252
+                border-radius: 6px
+        &__body
+            width: 100%
+            flex-direction: column
+            margin-top: 20px
+            justify-content: space-between
+        &__btn
+            width: 200px
+            margin: 0 auto
+            margin-top: 20px
+        &__checkbox
+            &+label
+                &:not(:last-child)
+                    margin-right: 20px
+        &__bottom
+            .search__pagination
+                margin-top: 0px
+
+    .car-list
+        &::after
+            display: none
+        &__block
+            grid-template-columns: 1fr
+        &__item
+            max-width: 300px
+            margin: 0 auto
+        &__image
+            height: 240px
+
+    .blog
+        &__title
+            font-size: 32px
+        &__all
+            font-size: 14px
+            svg
+                margin-left: 6px
+        &__block
+            grid-gap: 20px
+            grid-template-columns: 1fr
+        &__left
+            height: 480px
+        &__right
+            height: 480px
+        &__itemTitle
+            font-size: 14px
+            line-height: 21px
+
+    .footer
+        height: auto
+        padding: 30px 0
+        .container
+            max-width: 100%
+        &__logo
+            margin: 0 auto
+            img,svg
+                margin: 0 auto
+                margin-bottom: 5px
+        &__text
+            text-align: center
+            margin-bottom: 35px
+        &__nav
+            display: flex
+            flex-direction: column
+            margin: 0 auto
+            margin-bottom: 35px
+            li
+                text-align: center
+                &:not(:last-child)
+                    margin-right: 0
+                    margin-bottom: 20px
+        &__block
+            display: flex
+            flex-direction: column
+            margin-top: 0
+        &__auth
+            margin: 0 auto
+
+
+    .pagination
+        margin-top: 40px
+        &__item
+            &:not(:nth-child(7))
+                margin-right: 10px
+
+    .breadcrumbs
+        margin-top: 60px
+
+    .car
+        .container
+            max-width: 100%
+        &__box
+            display: flex
+            flex-direction: column
+        &__slider
+            width: 100%
+        &__for
+            width: 100%
+            height: 320px
+            margin-bottom: 20px
+            .slick-track
+                img
+                    object-fit: cover
+                    width: 100%
+                    height: 320px
+        &__info
+            margin-top: 10px
+        &__infoNav
+            display: flex
+            flex-direction: column
+        &__infoPrice
+            font-size: 24px
+            text-align: center
+        &__num
+            bottom: 70px
+        &__infoVin
+            font-size: 18px
+            span
+                font-size: 18px
+    .details
+        width: 100%
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1fr 
+        grid-gap: 20px 0
+    
+    .info
+        overflow: hidden
+        &__block
+            display: flex
+            flex-direction: column
+        &__content
+            width: 100%
+        &__title
+            font-size: 18px
+        &__text
+            p
+                font-size: 15px
+                line-height: 20px
+        &__last
+            display: flex
+            flex-direction: column
+            width: 100%
+            margin-top: 30px
+        &__lastTitle
+            text-align: center
+        &__lastBlock
+            display: grid
+            grid-template-columns: 1fr
+            grid-gap: 10px 0
+
+    .graph
+        width: 700px
+        overflow: scroll
+        width: 100%
+        overflow: scroll
+        &__title
+            font-size: 18px
+            margin-bottom: 15px
+        &__nav
+            display: flex
+            flex-direction: column
+        &__content
+            width: 100%
+            padding-bottom: 10px

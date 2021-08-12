@@ -14,9 +14,9 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__nav">
-				<div class="header__logo">
+				<a href="index.html" class="header__logo">
 					<img src="img/LOGO.png" alt="">
-				</div>
+				</a>
 				<ul class="header__links">
 					<li class="active">
 						<a href="#">
@@ -45,6 +45,48 @@
 					<a href="#">
 						Регистрация
 					</a>
+				</div>
+				<div class="header__menu">
+					<img src="img/svg/menu.svg" alt="" class="img-svg">
+				</div>
+			</div>
+			<div class="header-mobile">
+				<div class="header-mobile__cover">
+					<a href="index.html" class="header-mobile__logo">
+						<img src="img/svg/LOGO.svg" alt="" class="img-svg">
+					</a>
+					<ul class="header-mobile__links">
+						<li class="active">
+							<a href="#">
+								Главная
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Блог 
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Контакты
+							</a>
+						</li>
+					</ul>
+					<div class="header-mobile__auth">
+						<img src="img/svg/enter.svg" alt="" class="img-svg">
+						<a href="#">
+							Вход 
+						</a>
+						<span>
+							/ 
+						</span>
+						<a href="#">
+							Регистрация
+						</a>
+					</div>
+					<div class="header-mobile__close">
+						<img src="img/svg/close.svg" alt="" class="img-svg">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -75,7 +117,7 @@
 								</select>
 							</fieldset>
 							<fieldset class="search__item">
-								<legend>Марка</legend>
+								<legend>Модель</legend>
 								<select id="select1">
 									<option value=""><span>Все</span> <img src="img/svg/arrow.svg" alt="" class="img-svg select-arrow"></option>
 									<option value="1">1</option>
@@ -84,7 +126,7 @@
 								</select>
 							</fieldset>
 							<fieldset class="search__item">
-								<legend>Марка</legend>
+								<legend>Топливо</legend>
 								<select id="select1">
 									<option value=""><span>Все</span> <img src="img/svg/arrow.svg" alt="" class="img-svg select-arrow"></option>
 									<option value="1">1</option>
@@ -93,7 +135,14 @@
 								</select>
 							</fieldset>
 							<fieldset class="search__item">
-								<legend>Марка</legend>
+								<legend>Год выпуска</legend>
+								<input type="text" class="search__smallinput" placeholder="От">
+							</fieldset>
+							<fieldset class="search__item search__item--solo">
+								<input type="text" class="search__smallinput" placeholder="До">
+							</fieldset>
+							<fieldset class="search__item">
+								<legend>Коробка</legend>
 								<select id="select1">
 									<option value=""><span>Все</span> <img src="img/svg/arrow.svg" alt="" class="img-svg select-arrow"></option>
 									<option value="1">1</option>
@@ -102,43 +151,14 @@
 								</select>
 							</fieldset>
 							<fieldset class="search__item">
-								<legend>Марка</legend>
-								<select id="select1">
-									<option value=""><span>Все</span> <img src="img/svg/arrow.svg" alt="" class="img-svg select-arrow"></option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-								</select>
+								<legend>Цена</legend>
+								<input type="text" class="search__smallinput" placeholder="От">
+							</fieldset>
+							<fieldset class="search__item search__item--solo">
+								<input type="text" class="search__smallinput" placeholder="До">
 							</fieldset>
 							<fieldset class="search__item">
-								<legend>Марка</legend>
-								<select id="select1">
-									<option value=""><span>Все</span> <img src="img/svg/arrow.svg" alt="" class="img-svg select-arrow"></option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-								</select>
-							</fieldset>
-							<fieldset class="search__item">
-								<legend>Марка</legend>
-								<select id="select1">
-									<option value=""><span>Все</span> <img src="img/svg/arrow.svg" alt="" class="img-svg select-arrow"></option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-								</select>
-							</fieldset>
-							<fieldset class="search__item">
-								<legend>Марка</legend>
-								<select id="select1">
-									<option value=""><span>Все</span> <img src="img/svg/arrow.svg" alt="" class="img-svg select-arrow"></option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-								</select>
-							</fieldset>
-							<fieldset class="search__item">
-								<legend>Марка</legend>
+								<legend>Двигатель</legend>
 								<select id="select1">
 									<option value=""><span>Все</span> <img src="img/svg/arrow.svg" alt="" class="img-svg select-arrow"></option>
 									<option value="1">1</option>
@@ -234,7 +254,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -267,7 +287,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -300,7 +320,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -333,7 +353,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -366,7 +386,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -399,7 +419,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -432,7 +452,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -465,7 +485,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -498,7 +518,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -531,7 +551,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -564,7 +584,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -597,7 +617,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">
@@ -630,7 +650,7 @@
 									</div>
 									<div class="car-list__infoItem">
 										<div class="car-list__type">
-											<img src="img/svg/engine.svg" alt="" class="img-svg">
+											<img src="img/svg/engine.png" alt="" class="img-svg">
 											<span>Двигатель</span>
 										</div>
 										<div class="car-list__text">

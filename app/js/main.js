@@ -17,6 +17,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }, 'xml');
     }); 
 
+    $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        var docHeight = $( document ).height()
+        if (height > 90 && docHeight > 1200) {
+            document.querySelector('.header').classList.add('header__scroll')
+        } else {
+            document.querySelector('.header').classList.remove('header__scroll')
+        }
+    
+    });
+
     function menu(menuBtn, block, close) {
         if (document.querySelector(menuBtn)) {
             document.querySelector(menuBtn).addEventListener('click', () => {
@@ -29,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             })
         }
     } 
-    // menu('', '', '');
+    menu('.header__menu', '.header-mobile', '.header-mobile__close');
 
     $(document).ready(function() {
         $('.car__for').slick({
@@ -51,17 +62,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
             prevArrow: "<div class='prev'><img src='../img/svg/select-arrow.svg' alt='1'></div>",
 			nextArrow: "<div class='next'><img src='../img/svg/select-arrow.svg' alt='2'></div>",
         });
-        document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
-        document.querySelector('.car__length').textContent = $(".car__for").slick("getSlick").slideCount
-        document.querySelector('.car__for .next').addEventListener('click', () => {
+        if (document.querySelector('.car__links')) {
             document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
-        })
-        document.querySelector('.car__for .prev').addEventListener('click', () => {
-            document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
-        })
-        document.querySelector('.car__nav .next').addEventListener('click', () => {
-            document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
-        })
+            document.querySelector('.car__length').textContent = $(".car__for").slick("getSlick").slideCount
+            document.querySelector('.car__for .next').addEventListener('click', () => {
+                document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
+            })
+            document.querySelector('.car__for .prev').addEventListener('click', () => {
+                document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
+            })
+            document.querySelector('.car__nav .next').addEventListener('click', () => {
+                document.querySelector('.car__current').textContent = $('.car__for').slick('slickCurrentSlide') + 1
+            })
+        }
 
         $('.car__links').slick({
 			centerMode: true,
@@ -71,26 +84,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			prevArrow: "<div class='prev'><img src='../img/svg/arrow.svg' alt='1'></div>",
 			nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
 			responsive: [
+            {
+                breakpoint: 1250,
+                settings: {
+                centerMode: false,
+                slidesToShow: 2
+                }
+            },
 			{
 				breakpoint: 768,
 				settings: {
 				centerMode: true,
-				centerPadding: '40px',
-				slidesToShow: 3
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-				arrows: false,
-				centerMode: true,
-				centerPadding: '40px',
 				slidesToShow: 1
 				}
 			}
 			]
 		});
     })
+
+    function tabs() {
+		$('.graph').each(function() {
+			let ths = $(this);
+			ths.find('.graph__contentItem').not(':first').hide();
+			ths.find('.graph__tab').click(function() {
+				ths.find('.graph__tab').removeClass('graph__yearActive').eq($(this).index()).addClass('graph__yearActive');
+				ths.find('.graph__contentItem').hide().eq($(this).index()).fadeIn()
+			}).eq(0).addClass('active');
+		});
+	}
+    tabs();
+
 
 
     var numberOfSelects = $('select').length;
